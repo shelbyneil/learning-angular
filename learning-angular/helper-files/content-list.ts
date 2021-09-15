@@ -20,7 +20,7 @@ export class ContentList {
   }
 
   public increaseCount(){
-    return ContentList.contentCount;
+    return ++ContentList.contentCount;
   }
 
 }
