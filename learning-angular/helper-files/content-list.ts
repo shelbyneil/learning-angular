@@ -23,7 +23,7 @@ export class ContentList {
   }
 
   public arrayCount(){
-    return ContentList.contentCount;
+    return ContentList.length;
   }
 
 }
