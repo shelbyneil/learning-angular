@@ -15,4 +15,8 @@ export class ContentCardComponent implements OnInit {
 
   }
 
+  clickImage(){
+    console.log(this.content.id);
+  }
+
 }

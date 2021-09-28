@@ -1,0 +1,23 @@
+.card-content {
+  background-color: antiquewhite;
+  border: 5px solid goldenrod;
+  display: block;
+  margin: 5px;
+  padding: 5px;
+}
+
+:host.is-last {
+  border: 2px solid black;
+}
+
+h1, h2 {
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+
+h3 {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: medium;
+  text-align: center;
+}
