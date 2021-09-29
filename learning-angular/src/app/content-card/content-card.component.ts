@@ -15,7 +15,8 @@ export class ContentCardComponent implements OnInit {
 
   }
 
-  clickImage(){
+  // missing return void in the function declaration
+  clickImage(): void{
     console.log(this.content.id);
   }
 
