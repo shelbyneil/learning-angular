@@ -7,8 +7,6 @@
 }
 
 :host.is-last {
-  //what i was missing maybe?
-  display: block;
   border: 2px solid black;
 }
 
@@ -23,3 +21,4 @@ h3 {
   font-size: medium;
   text-align: center;
 }
+
