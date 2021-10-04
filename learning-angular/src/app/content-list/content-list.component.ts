@@ -25,7 +25,7 @@ export class ContentListComponent implements OnInit {
     id: 1,
     author: "Stephen King",
     title: "Carrie",
-    type: "Epistolary horror",
+    type: "Horror",
     imgUrl: "https://images.squarespace-cdn.com/content/v1/5a83a7c529f187a4cab99625/1529030026539-WTHKNUDSF8WUQ8F67WWA/May+1st+1983+by+New+English+Library.jpg",
     body: "News item from the Westover (Me.) weakly Enterprise, August 19, 1966",
     tags: ["novel", "horror", "stephen king"]
@@ -33,7 +33,7 @@ export class ContentListComponent implements OnInit {
     id: 2,
     author: "Stephen King",
     title: "Cujo",
-    type: "Psychological horror",
+    type: "Horror",
     imgUrl: "https://dyn1.heritagestatic.com/lf?set=path%5B8%2F5%2F7%2F9%2F8579801%5D%2Csizedata%5B850x600%5D&call=url%5Bfile%3Aproduct.chain%5D",
     body: "Once upon a time, not so long ago, a monster came to the small town of Castle Rock, Maine.",
     tags: ["novel", "horror", "stephen king"]

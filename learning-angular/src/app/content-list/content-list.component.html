@@ -3,3 +3,8 @@
                   [class.is.last]="isLast"
                   [content]="content"></app-content-card>
 <!-- lines 2 and 3 were what i was missing possibly-->
+
+<app-content-card *ngFor="let content of bookArray | filterContent;
+                  first as isFirst;"
+                  [content]="content"
+                  [class.is-first] = "isFirst"></app-content-card>
