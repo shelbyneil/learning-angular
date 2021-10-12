@@ -6,8 +6,8 @@ import { Content } from 'helper-files/content-interface';
 })
 export class FilterContentPipe implements PipeTransform {
 
-  transform(content: Content[]) {
-    return content.filter(c => c.type != null && c.type == "Crime");
+  transform(content: Content[], type: string): Content[] {
+    return content.filter(item => item.type == type);
   }
 
 }

@@ -1,13 +1,21 @@
 :host {
   background-color: antiquewhite;
-  border: 5px solid goldenrod;
+  border: 5px solid #ff0000;
   display: block;
   margin: 5px;
   padding: 5px;
 }
 
 :host.is-last {
-  border: 2px solid black;
+  border: 2px solid #000;
+}
+
+:host.crime{
+  border: 2px solid #ff00ff
+}
+
+:host.horror{
+  border: 2px solid #00ffff
 }
 
 h1, h2 {

@@ -2,12 +2,20 @@
 
 <html>
   <body class="card-content">
-  <h1>{{content.title}}, {{content.type}}</h1>
+  <div appHoverStyle><h1>{{content.title}}, {{content.type}}</h1></div>
   <h2>{{content.author}}</h2>
-  <img [src]="content.imgUrl" (click)="clickImage()" width="400" height="400" alt="novel cover art">
+  <div *ngIf="content.imgUrl else check">
+    <img [src]="content.imgUrl" (click)="clickImage()" width="400" height="400" alt="novel cover art">
+  </div>
+  <ng-template #check>
+    <img src="https://www.publicdomainpictures.net/pictures/280000/velka/not-found-image-15383864787lu.jpg"
+         alt="Default" class="defaultImage">
+  </ng-template>
   <h3>{{content.body}}</h3>
+  <h4>Tags:</h4> <div appHoverStyle *ngFor="let tag of content.tags">{{tag}}</div>
   </body>
 </html>
+
 
 
 <!--class solution-->

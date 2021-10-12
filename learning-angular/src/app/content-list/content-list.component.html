@@ -1,10 +1,17 @@
-<app-content-card *ngFor="let content of bookArray;
+<input #checkTitle> <button (click)="checkIfExists(checkTitle.value)"> Does it exist? </button>
+<div class="content-exists">
+  {{ message }}
+</div>
+
+<app-content-card *ngFor="let content of bookArray | filterContent: 'crime';
                   last as isLast"
                   [class.is.last]="isLast"
-                  [content]="content"></app-content-card>
-<!-- lines 2 and 3 were what i was missing possibly-->
+                  [content]="content" class="crime"></app-content-card>
 
-<app-content-card *ngFor="let content of bookArray | filterContent;
-                  first as isFirst;"
-                  [content]="content"
-                  [class.is-first] = "isFirst"></app-content-card>
+<app-content-card *ngFor="let content of bookArray | filterContent: 'horror';
+                  last as isLast"
+                  [class.is.last]="isLast"
+                  [content]="content" class="horror"></app-content-card>
+
+
+
