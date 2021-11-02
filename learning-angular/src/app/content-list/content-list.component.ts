@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Content} from "@angular/compiler/src/render3/r3_ast";
 
 @Component({
   selector: 'app-content-list',
@@ -67,5 +68,10 @@ export class ContentListComponent implements OnInit {
         console.log("Can't find that book!")
       }
     }
+  }
+
+  addBookToList(newBookFromChild: any){
+    this.bookArray.push(newBookFromChild);
+    this.bookArray = Object.assign([], this.bookArray);
   }
 }

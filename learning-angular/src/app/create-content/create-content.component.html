@@ -1,0 +1,28 @@
+<div #inputs>
+  <label>
+    Book ID:<input #bookID>
+  </label>
+
+  <label>
+    Author:<input #bookAuthor>
+  </label>
+
+  <label>
+    Title:<input #bookTitle>
+  </label>
+
+  <label>
+    Type(Genre):<input #bookType>
+  </label>
+
+  <label>
+    Image URL:<input #bookImage>
+  </label>
+
+  <label>
+    Body:<input #bookBody>
+  </label>
+</div>
+<button (click)="CreateNewContent(bookID.value, bookAuthor.value, bookTitle.value, bookType.value, bookImage.value,
+        bookBody.value)">
+  Create New Book Content Item!</button>

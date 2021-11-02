@@ -1,6 +1,10 @@
-<input #checkTitle> <button (click)="checkIfExists(checkTitle.value)"> Does it exist? </button>
+<app-create-content (newBookEvent)="addBookToList($event)"></app-create-content>
+<label>
+  <input #checkTitle>Check Title:
+</label>
+<button (click)="checkIfExists(checkTitle.value)"> Does it exist? </button>
 <div class="content-exists">
-  {{ message }}
+<!--  {{ message }}-->
 </div>
 
 <app-content-card *ngFor="let content of bookArray | filterContent: 'crime';
