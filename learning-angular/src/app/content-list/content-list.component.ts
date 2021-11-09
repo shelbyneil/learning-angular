@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {Content} from "../../../helper-files/content-interface";
 import {ContentService} from "../services/content.service";
 
-
 @Component({
   selector: 'app-content-list',
   templateUrl: './content-list.component.html',
@@ -28,4 +27,5 @@ export class ContentListComponent implements OnInit {
       }
     }
   }
+
 }
