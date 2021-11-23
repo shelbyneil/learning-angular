@@ -1,28 +1,30 @@
-<div #inputs>
+<div>
+<mat-form-field>
   <label>
-    Book ID: <input #bookID>
+    Book ID: <input [(ngModel)]="tempId">
   </label>
 
   <label>
-    Author: <input #bookAuthor>
+    Author: <input [(ngModel)]="newBookItem.author">
   </label>
 
   <label>
-    Title: <input #bookTitle>
+    Title: <input [(ngModel)]="newBookItem.title">
   </label>
 
   <label>
-    Type (Genre): <input #bookType>
+    Type (Genre): <input [(ngModel)]="newBookItem.type">
   </label>
 
   <label>
-    Image URL: <input #bookImage>
+    Image URL: <input [(ngModel)]="newBookItem.imgUrl">
   </label>
 
   <label>
-    Body: <input #bookBody>
+    Body: <input [(ngModel)]="newBookItem.body">
   </label>
+</mat-form-field>
 
-  <button (click)="CreateNewContent(bookID.value, bookAuthor.value, bookTitle.value, bookType.value,
-  bookImage.value, bookBody.value)">Create New Item</button>
+  <button mat-raised-button color="primary" (click)="CreateNewContent()">Create New Item</button>
+  <button mat-raised-button color="primary" (click)="update()">Update Item</button>
 </div>

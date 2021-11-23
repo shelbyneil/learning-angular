@@ -1,5 +1,10 @@
 <app-create-component></app-create-component>
-<input #checkTitle> <button (click)="checkIfExists(checkTitle.value)"> Does it exist? </button>
+<mat-form-field>
+  <label>
+    <input #checkTitle>
+  </label>
+</mat-form-field>
+<button mat-raised-button color="primary" (click)="checkIfExists(checkTitle.value)"> Does it exist? </button>
 <div class="content-exists">
 <!--  {{ message }}-->
 </div>

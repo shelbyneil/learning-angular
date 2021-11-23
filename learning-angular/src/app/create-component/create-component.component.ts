@@ -58,5 +58,4 @@ export class CreateComponentComponent implements OnInit {
       };
     });
   }
-
 }
