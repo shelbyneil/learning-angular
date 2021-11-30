@@ -1,7 +1,7 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {Content} from "../../../helper-files/content-interface";
 import {ContentService} from "../services/content.service";
-import {MessageService} from "../message.service";
+import {MessageService} from "../services/message.service";
 
 @Component({
   selector: 'app-create-component',

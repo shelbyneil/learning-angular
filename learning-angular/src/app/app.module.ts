@@ -10,10 +10,13 @@ import { CreateComponentComponent } from './create-component/create-component.co
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {HttpClientInMemoryWebApiModule} from "angular-in-memory-web-api";
-import {InMemoryDataService} from "./in-memory-data.service";
+import {InMemoryDataService} from "./services/in-memory-data.service";
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
+import { ContentDetailComponent } from './content-detail/content-detail.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { RouterModule } from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -23,7 +26,9 @@ import {MatInputModule} from '@angular/material/input';
     FilterContentPipe,
     HoverStyleDirective,
     MessagesComponent,
-    CreateComponentComponent
+    CreateComponentComponent,
+    ContentDetailComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +39,13 @@ import {MatInputModule} from '@angular/material/input';
     }),
     NoopAnimationsModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    RouterModule.forRoot([
+      { path: 'content/:id', component: ContentDetailComponent
+      },
+      { path: 'content', component: ContentListComponent },
+      { path: '**', component: NotFoundComponent }
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

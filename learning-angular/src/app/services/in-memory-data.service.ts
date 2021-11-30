@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Content} from "../../helper-files/content-interface";
+import { Content} from "../../../helper-files/content-interface";
 import { InMemoryDbService} from "angular-in-memory-web-api";
 
 @Injectable({

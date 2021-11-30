@@ -1,0 +1,21 @@
+<div *ngIf="item.id != null">
+
+  <img class="item-image" [src]="item.imgUrl">
+
+  <div class="item-title" [ngSwitch="item.title">
+    {{item.title}}
+  </div>
+
+    <div class="item-author">
+      {{item.author}}, {{item.type}}
+    </div>
+
+    <div class="item-body">
+      {{item.body}}
+    </div>
+
+  <button>
+    <a [routerLink]="['content']" routerLinkActive="active">Item List</a>
+  </button>
+
+</div>
